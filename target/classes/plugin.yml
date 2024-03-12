@@ -1,0 +1,13 @@
+name: HolidayItem
+version: '1.0-SNAPSHOT'
+main: me.jake276493.holidayitem.HolidayItem
+api-version: '1.20'
+authors: [jake276493]
+description: Gives customizable items on specified start and end date
+commands:
+  setdates:
+    description: Set time for start and end of event
+    usage: /<command>
+  setitem:
+    description: Set the item for the event to be given
+    usage: /<command>
