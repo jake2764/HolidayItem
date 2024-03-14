@@ -8,6 +8,18 @@ commands:
   setdates:
     description: Set time for start and end of event
     usage: /<command>
+    permission: holidayitem.setdates
   setitem:
     description: Set the item for the event to be given
     usage: /<command>
+    permission: holidayitem.setitem
+permissions:
+  holidayitem.setdates:
+    description: Allows user to set dates for event
+  holidayitem.setitem:
+    description: Allows user to set the item to be given for event
+  holidayitem.*:
+    description: All commands and functionality of the plugin
+    children:
+      holidayitem.setdates: true
+      holidayitem.setitem: true
