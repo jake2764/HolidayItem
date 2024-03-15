@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
 
 
 public class SetItemCommand implements CommandExecutor {
@@ -22,16 +23,20 @@ public class SetItemCommand implements CommandExecutor {
             return true;
         }
 
+
         Player p = (Player)sender;
 
         if(!p.hasPermission("holidayitem.setitem")){
             return true;
         }
 
+        if(args.length > 0){
+            plugin.getConfig().set("EventMessage", Arrays.toString(args));
+            plugin.saveConfig();
+        }
+
         ItemSerializer.serializeItemStack(p.getInventory().getItemInMainHand(), plugin.getConfig().createSection("NBTData"));
         ItemSerializer.saveToFile(plugin.getConfig(), plugin.getDataFolder() + "/config.yml");
-        //plugin.getConfig().set("ItemNBT", p.getInventory().getItemInMainHand());
-        //plugin.saveConfig();
         p.sendMessage("Item set successfully");
         return true;
     }

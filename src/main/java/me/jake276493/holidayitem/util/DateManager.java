@@ -17,7 +17,6 @@ public class DateManager {
         HolidayItem plugin = HolidayItem.getPlugin();
         Date[] dates = new Date[2];
 
-
         //Reads values from Config and gives error if values in config are invalid (should not be possible)
         try{
             dates[0] = dateFormat.parse(plugin.getConfig().getString("StartDate"));
@@ -39,7 +38,7 @@ public class DateManager {
             Date eventItemStart = dateFormat.parse(startDate);
             Date eventItemEnd = dateFormat.parse(endDate);
             //Makes sure start date is before end date
-            if(eventItemStart.before(eventItemEnd)) return;
+            if(eventItemEnd.before(eventItemStart)) return;
         } catch (ParseException e) {
             sender.sendMessage("Unknown Error");
             Bukkit.getLogger().info("Error parsing user sent date");
