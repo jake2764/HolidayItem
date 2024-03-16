@@ -7,8 +7,8 @@ public class EventManager {
     public static void resetEvent(){
         HolidayItem plugin = HolidayItem.getPlugin();
 
-        plugin.getConfig().set("StartDate", "");
-        plugin.getConfig().set("EndDate", "");
+        plugin.getConfig().set("StartDate", "1970-01-01");
+        plugin.getConfig().set("EndDate", "1970-01-02");
         plugin.getConfig().set("NBTData", "");
         plugin.getConfig().set("EventMessage", "");
         plugin.getConfig().set("UUIDReceived", "");

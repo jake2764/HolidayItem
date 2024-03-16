@@ -17,7 +17,7 @@ public class SetItemCommand implements CommandExecutor {
 
         HolidayItem plugin = HolidayItem.getPlugin();
 
-        if(!(sender instanceof  Player)){
+        if(!(sender instanceof Player)){
             sender.sendMessage("Only players can use this command.");
             return true;
         }
@@ -30,12 +30,12 @@ public class SetItemCommand implements CommandExecutor {
         }
 
         if(args.length > 0){
-            StringBuilder sb = new StringBuilder();
             plugin.getConfig().set("EventMessage", arrayToString(args));
         } else {
             plugin.getConfig().set("EventMessage", "");
         }
 
+        //Serializes and Saves item currently held in hand to the config.yml file then saves the config
         ItemSerializer.serializeItemStack(p.getInventory().getItemInMainHand(), plugin.getConfig().createSection("NBTData"));
         ItemSerializer.saveToFile(plugin.getConfig(), plugin.getDataFolder() + "/config.yml");
         p.sendMessage("Item set successfully");

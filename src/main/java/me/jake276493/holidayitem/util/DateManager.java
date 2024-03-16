@@ -32,7 +32,6 @@ public class DateManager {
 
         HolidayItem plugin = HolidayItem.getPlugin();
 
-
         //Makes sure dates are valid format
         try {
             Date eventItemStart = dateFormat.parse(startDate);

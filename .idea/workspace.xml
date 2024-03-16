@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb0eb12-33e6-477b-a944-d80b1c4c0104" name="Changes" comment="Bug Fixes, added EventMessage in config.yml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/EventManager.java" afterDir="false" />
+    <list default="true" id="1cb0eb12-33e6-477b-a944-d80b1c4c0104" name="Changes" comment="Drop item logic if inventory is full, ensure item is set on join, added EventManager to reset events if command is run (todo) or currentdate is after event item end, fixed event item message. Probably more but i forgor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/commands/SetItemCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/commands/SetItemCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/listeners/OnPlayerJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/listeners/OnPlayerJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/DateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/DateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/EventManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/commands/SetItemCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/commands/SetItemCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/listeners/OnPlayerJoin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/listeners/OnPlayerJoin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/util/DateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/util/DateManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-HolidayItem-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-HolidayItem-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,22 +58,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.HolidayItem package.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jbeah/OneDrive - University of Central Missouri/JavaProjects/Programming 2/Assignment5&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.HolidayItem package.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jbeah/IdeaProjects/Homework 5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="HolidayItem package" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -136,7 +129,7 @@
       <workItem from="1710424239770" duration="4135000" />
       <workItem from="1710472296823" duration="2372000" />
       <workItem from="1710514457216" duration="1335000" />
-      <workItem from="1710516950927" duration="10108000" />
+      <workItem from="1710516950927" duration="13617000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Functionality">
       <option name="closed" value="true" />
@@ -170,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710517517539</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Drop item logic if inventory is full, ensure item is set on join, added EventManager to reset events if command is run (todo) or currentdate is after event item end, fixed event item message. Probably more but i forgor">
+      <option name="closed" value="true" />
+      <created>1710622548973</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710622548973</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +180,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Functionality" />
     <MESSAGE value="Bug Fixes, added EventMessage in config.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes, added EventMessage in config.yml" />
+    <MESSAGE value="Drop item logic if inventory is full, ensure item is set on join, added EventManager to reset events if command is run (todo) or currentdate is after event item end, fixed event item message. Probably more but i forgor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Drop item logic if inventory is full, ensure item is set on join, added EventManager to reset events if command is run (todo) or currentdate is after event item end, fixed event item message. Probably more but i forgor" />
   </component>
 </project>
