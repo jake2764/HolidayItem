@@ -1,8 +1,9 @@
-StartDate: '2024-03-11'
-EndDate: '2024-03-13'
+StartDate: '1970-01-01'
+EndDate: '1970-01-02'
 ItemNBT: ''
 EventMessage: ''
 ChanceOfItem: 1.0
 AmountOfItem: 1
+AllowMultipleItems: false
 UUIDReceived:
   - '1'
