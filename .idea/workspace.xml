@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb0eb12-33e6-477b-a944-d80b1c4c0104" name="Changes" comment="Basic Functionality">
+    <list default="true" id="1cb0eb12-33e6-477b-a944-d80b1c4c0104" name="Changes" comment="Bug Fixes, added EventMessage in config.yml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/EventManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/commands/SetItemCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/commands/SetItemCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/listeners/OnPlayerJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/listeners/OnPlayerJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/DateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/DateManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/ItemSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/ItemSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/commands/SetItemCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/commands/SetItemCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/listeners/OnPlayerJoin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/listeners/OnPlayerJoin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/util/DateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/util/DateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-HolidayItem-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-HolidayItem-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +136,7 @@
       <workItem from="1710424239770" duration="4135000" />
       <workItem from="1710472296823" duration="2372000" />
       <workItem from="1710514457216" duration="1335000" />
-      <workItem from="1710516950927" duration="484000" />
+      <workItem from="1710516950927" duration="10108000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Functionality">
       <option name="closed" value="true" />
@@ -160,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710217613999</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Bug Fixes, added EventMessage in config.yml">
+      <option name="closed" value="true" />
+      <created>1710517517539</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710517517539</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +178,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Functionality" />
+    <MESSAGE value="Bug Fixes, added EventMessage in config.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes, added EventMessage in config.yml" />
   </component>
 </project>
