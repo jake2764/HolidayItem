@@ -13,13 +13,20 @@ commands:
     description: Set the item for the event to be given
     usage: /<command>
     permission: holidayitem.setitem
+  resetevent:
+    description: Allows for the current event to be reset
+    usage: /<command>
+    permission: holidayitem.resetevent
 permissions:
   holidayitem.setdates:
     description: Allows user to set dates for event
   holidayitem.setitem:
     description: Allows user to set the item to be given for event
+  holidayitem.resetevent:
+    description: Allows user to reset the current event
   holidayitem.*:
     description: All commands and functionality of the plugin
     children:
       holidayitem.setdates: true
       holidayitem.setitem: true
+      holidayitem.resetevent: true

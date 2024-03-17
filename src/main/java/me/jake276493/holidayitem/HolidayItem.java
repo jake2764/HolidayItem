@@ -1,4 +1,5 @@
 package me.jake276493.holidayitem;
+import me.jake276493.holidayitem.commands.ResetEventCommand;
 import me.jake276493.holidayitem.commands.SetDatesCommand;
 import me.jake276493.holidayitem.commands.SetItemCommand;
 import me.jake276493.holidayitem.listeners.OnPlayerJoin;
@@ -16,6 +17,7 @@ public final class HolidayItem extends JavaPlugin {
 
         getCommand("setdates").setExecutor(new SetDatesCommand());
         getCommand("setitem").setExecutor(new SetItemCommand());
+        getCommand("resetevent").setExecutor(new ResetEventCommand());
         getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
 
     }

@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cb0eb12-33e6-477b-a944-d80b1c4c0104" name="Changes" comment="Drop item logic if inventory is full, ensure item is set on join, added EventManager to reset events if command is run (todo) or currentdate is after event item end, fixed event item message. Probably more but i forgor">
+    <list default="true" id="1cb0eb12-33e6-477b-a944-d80b1c4c0104" name="Changes" comment="Built plugin">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/commands/ResetEventCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/commands/SetItemCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/commands/SetItemCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/HolidayItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/HolidayItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/listeners/OnPlayerJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/listeners/OnPlayerJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/DateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/DateManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jake276493/holidayitem/util/EventManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HolidayItem-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/listeners/OnPlayerJoin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/jake276493/holidayitem/listeners/OnPlayerJoin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-HolidayItem-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-HolidayItem-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +134,7 @@
       <workItem from="1710424239770" duration="4135000" />
       <workItem from="1710472296823" duration="2372000" />
       <workItem from="1710514457216" duration="1335000" />
-      <workItem from="1710516950927" duration="13617000" />
+      <workItem from="1710516950927" duration="17059000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Functionality">
       <option name="closed" value="true" />
@@ -171,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710622548973</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cleaned up Code, created boolean allowmultiple, and cleaned up code.">
+      <option name="closed" value="true" />
+      <created>1710631545140</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710631545140</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Built plugin">
+      <option name="closed" value="true" />
+      <created>1710631603039</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710631603039</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +202,8 @@
     <MESSAGE value="Basic Functionality" />
     <MESSAGE value="Bug Fixes, added EventMessage in config.yml" />
     <MESSAGE value="Drop item logic if inventory is full, ensure item is set on join, added EventManager to reset events if command is run (todo) or currentdate is after event item end, fixed event item message. Probably more but i forgor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Drop item logic if inventory is full, ensure item is set on join, added EventManager to reset events if command is run (todo) or currentdate is after event item end, fixed event item message. Probably more but i forgor" />
+    <MESSAGE value="Cleaned up Code, created boolean allowmultiple, and cleaned up code." />
+    <MESSAGE value="Built plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Built plugin" />
   </component>
 </project>

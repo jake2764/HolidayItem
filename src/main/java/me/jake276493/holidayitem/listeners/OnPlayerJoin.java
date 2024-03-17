@@ -14,6 +14,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public class OnPlayerJoin implements Listener {
         Date currentDate = new Date();
 
         //Resets the event if the current date is after the event ends
-        if(currentDate.after(eventItemDates[1])) {
+        if(currentDate.after(eventItemDates[1]) && eventItemDates[1].after(new Date(2024, Calendar.JANUARY, 1))) {
             EventManager.resetEvent();
         }
 
@@ -44,23 +45,25 @@ public class OnPlayerJoin implements Listener {
 
             if(currentDate.before(eventItemDates[1]) && (currentDate.after(eventItemDates[0]))){
 
-                //Attempts to deserialize item from Config.yml
-                ItemStack item = ItemSerializer.deserializeItemStack(Objects.requireNonNull(plugin.getConfig().getConfigurationSection("NBTData")));
+                if(allowMultiple || !UUIDReceived.contains(p.getUniqueId().toString())){
+                    //Attempts to deserialize item from Config.yml
+                    ItemStack item = ItemSerializer.deserializeItemStack(Objects.requireNonNull(plugin.getConfig().getConfigurationSection("NBTData")));
 
-                //If Inventory Full logic, Inventory.firstEmpty() returns -1 if there are no empty slots in an inventory
-                //Else adds item to inventory directly
-                if(inventory.firstEmpty() == -1){
-                    world.dropItem(p.getLocation(), item);
-                    plugin.getLogger().info("Item DROPPED " + item);
-                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWARNING: Your item has been dropped at your location since your inventory is full"));
-                } else {
-                    inventory.addItem(item);
-                    plugin.getLogger().info("Item GIVEN " + item);
-                }
+                    //If Inventory Full logic, Inventory.firstEmpty() returns -1 if there are no empty slots in an inventory
+                    //Else adds item to inventory directly
+                    if(inventory.firstEmpty() == -1){
+                        world.dropItem(p.getLocation(), item);
+                        plugin.getLogger().info("Item DROPPED " + item);
+                        p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lWARNING: Your item has been dropped at your location since your inventory is full"));
+                    } else {
+                        inventory.addItem(item);
+                        plugin.getLogger().info("Item GIVEN " + item);
+                    }
 
-                //Send Message Logic
-                if(plugin.getConfig().getString("EventMessage") != null){
-                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("EventMessage"))));
+                    //Send Message Logic
+                    if(plugin.getConfig().getString("EventMessage") != null){
+                        p.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(plugin.getConfig().getString("EventMessage"))));
+                    }
                 }
 
                 //Adds player to UUIDReceived if only 1 item per person and saves config
